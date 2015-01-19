@@ -82,9 +82,15 @@
 					list = [],
 					options;
 
+				// @!! Move this
+				entry = app.system.file.standardizeFile(entry);
+
 				if (!check(entry)){
 					return false;
 				};
+
+				// @!! Move this
+				app.Notice('Reading ' + entry.path);
 
 				options = new Windows.Storage.Search.QueryOptions(Windows.Storage.Search.CommonFileQuery.defaultQuery, ['*']);
 				options.folderDepth = Windows.Storage.Search.FolderDepth.deep;

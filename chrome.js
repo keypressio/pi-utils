@@ -196,7 +196,7 @@
 			},
 			get: function(key){
 				var deferred = $.Deferred(),
-					url = null;
+					url = 'http://www.subtexteditor.com/api/storage.get.php';
 
 				if (navigator.onLine && url != null) {
 					$.getJSON(url, {key: key, token: app.user.token}).done(function(resp){
